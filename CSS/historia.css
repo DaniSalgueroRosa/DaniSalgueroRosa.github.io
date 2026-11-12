@@ -1,0 +1,71 @@
+.page-hero h1 { font-size: clamp(3.5rem, 11vw, 7.5rem); }
+.page-hero .lead { margin-bottom: 3.5rem; }
+#historia { scroll-margin-top: 64px; }
+#indice h2 { margin-bottom: 2rem; }
+
+/* Índice como línea del tiempo */
+.timeline { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--stone); }
+.timeline a {
+  display: grid; grid-template-columns: minmax(9rem, 14rem) 1fr; gap: 1.5rem;
+  padding: 1.4rem .75rem; text-decoration: none;
+  border-bottom: 1px solid var(--stone);
+  transition: background .3s, color .3s;
+}
+.timeline .era { font: 1.1rem/1.4 var(--display); color: var(--aegean-2); transition: color .3s; }
+.timeline h3 { margin: 0 0 .3rem; font: 400 1.7rem/1.15 var(--display); }
+.timeline p { max-width: 58ch; margin: 0; color: var(--muted); transition: color .3s; }
+.timeline a:hover, .timeline a:focus-visible { color: var(--marble); background: var(--aegean); }
+.timeline a:hover .era, .timeline a:focus-visible .era { color: var(--ochre); }
+.timeline a:hover p, .timeline a:focus-visible p { color: #c9d6dd; }
+.timeline a:focus-visible { outline-offset: -4px; }
+
+/* Artículos */
+.art { margin-bottom: 4.5rem; }
+.art .era { margin: 0; font: 1.15rem var(--display); color: var(--aegean-2); }
+.art h2 { margin: .3rem 0 1rem; font: 400 clamp(2.4rem, 6vw, 4rem)/1.05 var(--display); }
+.art h2:focus { outline: none; }
+.lead-art { margin: 0 0 1.5rem; font-size: 1.35rem; line-height: 1.45; color: var(--muted); }
+.art p { margin: 0 0 1.25rem; }
+.art p.era, .art p.lead-art { margin-top: 0; }
+
+.dates { margin: 2rem 0 0; padding: 0; list-style: none; border-left: 3px solid var(--ochre); }
+.dates li { padding: .4rem 0 .4rem 1rem; }
+.dates b { display: inline-block; min-width: 10.5rem; font: 400 1.05rem var(--display); color: var(--aegean); }
+
+.art-nav {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;
+  margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--stone);
+}
+.art-nav a { text-decoration-color: var(--ochre); text-underline-offset: 5px; }
+
+/* Con JavaScript solo se muestra un artículo cada vez */
+.js .art { display: none; }
+.js .art.active { display: block; }
+
+@media (max-width: 600px) {
+  .timeline a { grid-template-columns: 1fr; gap: .4rem; }
+  .dates b { display: block; min-width: 0; }
+}
+
+/* Subapartados dentro de los artículos */
+.art h3 { margin: 2.4rem 0 .7rem; font: 400 1.65rem/1.2 var(--display); color: var(--aegean); }
+
+/* Artículos a todo el ancho: cabecera con foto, cuerpo en columnas y fechas en franja */
+.art-head { display: grid; gap: 1.5rem 3rem; align-items: end; margin-bottom: 2.5rem; }
+.art-head .lead-art { max-width: 60ch; }
+.foto { margin: 0; }
+.foto img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: var(--stone); }
+.foto figcaption { margin-top: .6rem; font-size: .9rem; color: var(--muted); }
+.cuerpo section { margin-bottom: 1.5rem; padding-top: 1rem; border-top: 3px solid var(--aegean); }
+.cuerpo h3 { margin-top: 0; }
+
+@media (max-width: 999px) {
+  .cuerpo, .dates, .art-head .lead-art { max-width: 68ch; }
+}
+@media (min-width: 1000px) {
+  .art-head:has(.foto) { grid-template-columns: 1.1fr 1fr; }
+  .cuerpo { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 3rem; }
+  .dates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 3rem; margin-top: 2.5rem; border-left: 0; border-top: 3px solid var(--ochre); }
+  .dates li { padding: 1rem 0 0; }
+  .dates b { display: block; min-width: 0; }
+}
