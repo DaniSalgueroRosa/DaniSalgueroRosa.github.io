@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El Ágora: historia, filosofía y las ideas que siguen en la plaza</title>
+  <meta name="description" content="El Ágora es un espacio abierto para leer sobre historia, filosofía, arte, literatura, ciencia y mitología.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏛️%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html">El Ágora</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="filosofia.html">Filosofía</a></li>
+          <li><a href="arte.html">Arte</a></li>
+          <li><a href="literatura.html">Literatura</a></li>
+          <li><a href="ciencia.html">Ciencia</a></li>
+          <li><a href="mitologia.html">Mitología</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="wrap">
+        <h1>El Ágora</h1>
+        <p class="lead">La plaza donde se cruzan la historia, la filosofía, el arte y las ideas que nos siguen haciendo preguntas.</p>
+        <div class="cta">
+          <a class="btn" href="#secciones">Explorar el Ágora</a>
+          <a class="btn ghost" href="filosofia.html">Empezar por filosofía</a>
+        </div>
+        <figure class="quote" id="quote" aria-live="polite">
+          <blockquote id="quote-text">«Conócete a ti mismo.»</blockquote>
+          <figcaption id="quote-author">Inscripción del templo de Apolo en Delfos</figcaption>
+          <button type="button" id="quote-btn">Otra cita</button>
+        </figure>
+      </div>
+      <div class="meander" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="secciones">
+      <div class="wrap">
+        <h2>Elige por dónde empezar</h2>
+        <p class="section-intro">Seis puertas a la misma plaza. Entra por la que más te llame y sigue los caminos que se crucen.</p>
+      </div>
+      <div class="wrap">
+        <div class="colonnade">
+          <a class="col" style="--i:0" href="historia.html">
+            <span class="glyph" aria-hidden="true">α</span>
+            <h3>Historia</h3>
+            <p>De las ciudades griegas al mundo actual: imperios, revoluciones y las personas que cambiaron el rumbo.</p>
+          </a>
+          <a class="col" style="--i:1" href="filosofia.html">
+            <span class="glyph" aria-hidden="true">β</span>
+            <h3>Filosofía</h3>
+            <p>Las preguntas sobre la verdad, la virtud y la vida buena, de Sócrates a hoy.</p>
+          </a>
+          <a class="col" style="--i:2" href="arte.html">
+            <span class="glyph" aria-hidden="true">γ</span>
+            <h3>Arte</h3>
+            <p>Templos, esculturas y pinturas: lo que nos hace detenernos a mirar.</p>
+          </a>
+          <a class="col" style="--i:3" href="literatura.html">
+            <span class="glyph" aria-hidden="true">δ</span>
+            <h3>Literatura</h3>
+            <p>Epopeyas, tragedias y novelas: las historias con las que nos contamos a nosotros mismos.</p>
+          </a>
+          <a class="col" style="--i:4" href="ciencia.html">
+            <span class="glyph" aria-hidden="true">ε</span>
+            <h3>Ciencia</h3>
+            <p>Del asombro ante el cosmos a los descubrimientos que explican el mundo.</p>
+          </a>
+          <a class="col" style="--i:5" href="mitologia.html">
+            <span class="glyph" aria-hidden="true">ζ</span>
+            <h3>Mitología</h3>
+            <p>Dioses, héroes y monstruos: los relatos que dieron sentido a lo inexplicable.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre">
+      <div class="wrap">
+        <h2>¿Qué era el ágora?</h2>
+        <div>
+          <p>En las ciudades griegas, el ágora era la plaza central. Allí se comerciaba, se votaba y, sobre todo, se conversaba. Sócrates la recorría preguntando a cualquiera que se cruzara en su camino.</p>
+          <p>Esta web quiere ser eso: un lugar abierto donde leer, preguntar y volver a pensar lo que creíamos saber.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p>© <span id="year">2026</span> El Ágora</p>
+      <ul>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="filosofia.html">Filosofía</a></li>
+        <li><a href="arte.html">Arte</a></li>
+        <li><a href="literatura.html">Literatura</a></li>
+        <li><a href="ciencia.html">Ciencia</a></li>
+        <li><a href="mitologia.html">Mitología</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
